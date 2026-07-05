@@ -29,11 +29,17 @@ from .prompts import (
     autocrop_discovery_prompt, autocrop_localize_prompt,
 )
 
-GEMINI_MODELS = ["gemini-3.1-pro-preview", "gemini-3-flash-preview"]
+GEMINI_MODELS = [
+    "gemini-3.1-pro-preview",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-3-flash-preview",
+]
 OPENROUTER_MODELS = [
     "google/gemini-3.1-pro-preview",
+    "google/gemini-3.5-flash",
+    "google/gemini-3.1-flash-lite",
     "google/gemini-3-flash-preview",
-    "google/gemini-3.1-flash-lite-preview",
 ]
 AVAILABLE_MODELS = GEMINI_MODELS + [f"openrouter:{m}" for m in OPENROUTER_MODELS]
 DEFAULT_MODEL = AVAILABLE_MODELS[0]
